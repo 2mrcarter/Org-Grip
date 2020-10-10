@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color='tertiary'>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <div class='center'>
+  <app-logo></app-logo>
+  <h1>Come on in</h1>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position='floating'>Username</ion-label>
+        <ion-input autocomplete="off" type="text" name="username" [(ngModel)]="postData.username"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position='floating'>Password</ion-label>
+        <ion-input autocomplete="off" type="password" name="password" [(ngModel)]="postData.password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+        <a routerLink='/Signup'>Create Account</a>
+      </ion-item>
+    </ion-list>
+    <ion-button share="round" color="tertiary" (click)="loginAction()">Login</ion-button>
+  </form>
+  </div>
+</ion-content>
